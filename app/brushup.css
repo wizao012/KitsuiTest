@@ -1,0 +1,34 @@
+:root{--navy:#123778;--deep:#081e50;--ink:#172c4a;--font-sans:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif}
+.original-copy{display:contents}
+.lp-shell .section{padding:56px 24px}
+.lp-shell .section h2{font-size:34px;line-height:1.45;letter-spacing:-.035em}
+.lp-shell .body-copy{font-size:16px;line-height:1.9;letter-spacing:0}
+.lp-shell .fine{font-size:12px;line-height:1.85;text-align:left;padding-left:1em;text-indent:-1em}
+.lp-shell .eyebrow{letter-spacing:.02em}
+.lp-shell .eyebrow>span{color:#175fc0;border-color:#cad8ea}
+.lp-shell .cta{font-size:16px;letter-spacing:0;box-shadow:none;min-height:60px}
+.lp-shell .cta:after{content:'→';font-size:20px;flex-shrink:0}
+.lp-shell .hero-conversion{background:linear-gradient(155deg,#11377c,#081e50)}
+.lp-shell .hero-conversion:before{display:none}
+.lp-shell .intro-feature-icon{display:none}
+.lp-shell .device-grid span:before{content:'✓';color:#175fc0;margin-right:6px}
+.lp-shell .plus-sign:after{content:'+'}
+.lp-shell .industry-indicator:after{content:'＋';font-style:normal}
+.lp-shell .industry.is-expanded .industry-indicator:after{content:'−'}
+.lp-shell .industry-copy p{font-size:15px;line-height:1.75}
+.lp-shell .quality-items>div{padding-left:12px;border-left:3px solid #175fc0}
+.lp-shell .quality-items h3,.lp-shell .quality-items p{grid-column:1 / -1}
+.lp-shell .faq-body{padding:0}
+.lp-shell .faq h3{font-size:15px;line-height:1.65}
+.lp-shell .faq .answer{font-size:14px;line-height:1.85}
+.lp-shell .faq .answer p{text-align:left}
+.lp-shell .faq-body>.faq-lead{display:none}
+.lp-shell .contact-form{margin-top:28px}
+.lp-shell .contact-form .fine{text-indent:0;padding-left:0}
+.lp-shell .contact-form label{font-size:14px}
+.lp-shell .contact-form .button{font-size:15px;letter-spacing:0}
+.floating-cta .float-phone{background:#fff;color:#123778;border:1px solid #d4deed;flex:0 0 36%;font-size:14px;display:flex;align-items:center;justify-content:center}
+@media(max-width:390px){.lp-shell .section{padding:46px 20px}.lp-shell .section h2{font-size:30px}.lp-shell .body-copy{font-size:15px}.lp-shell .hero-audience{font-size:14px}}.floating-cta{grid-template-columns:112px 1fr}.floating-cta .float-phone{font-size:12px;white-space:nowrap;box-shadow:none;letter-spacing:0;min-height:56px}
+.lp-shell .form-section{background:linear-gradient(145deg,#123778,#081e50)}
+.lp-shell .form-section h2,.lp-shell .form-section h2 em,.lp-shell .form-section .eyebrow{color:#fff}
+.lp-shell .form-section .contact-form{color:#172c4a;background:#fff;padding:24px 20px;border-radius:10px}

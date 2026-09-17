@@ -1,0 +1,2 @@
+'use client';
+export function OriginalArtwork({html}:{html:string}){return <div className="original-copy" onClick={e=>{const button=(e.target as HTMLElement).closest<HTMLButtonElement>('.industry-toggle');if(!button)return;const article=button.closest('.industry');const expanded=button.getAttribute('aria-expanded')==='true';article?.classList.toggle('is-expanded',!expanded);button.setAttribute('aria-expanded',String(!expanded));}} dangerouslySetInnerHTML={{__html:html}}/>}

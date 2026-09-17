@@ -1,0 +1,36 @@
+/* Ver1.2 — shared CTA hierarchy and spacing. */
+.lp-shell .cta-stack{gap:12px}
+.lp-shell .cta-stack>.cta,.lp-shell .hero-inquiry,.lp-shell .contact-form .button{position:relative;display:flex;align-items:center;justify-content:center;width:100%;max-width:100%;min-height:60px;margin-inline:0;padding:16px 44px;border-radius:8px;font-size:16px;font-weight:700;line-height:1.6;letter-spacing:.01em;text-align:center;transition:background .16s,box-shadow .16s,transform .16s}
+.lp-shell .cta-stack>.cta>span{flex:0 1 auto;text-align:center}
+.lp-shell .cta-stack>.cta:after,.lp-shell .hero-inquiry:after{content:'›';position:absolute;right:16px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;font-family:Arial,sans-serif;font-size:24px;line-height:1;background:#ffffff26;color:inherit}
+.lp-shell .cta-stack>.cta-orange,.lp-shell .contact-form .button.primary{color:#fff;background:linear-gradient(180deg,#ef8b17 0%,#df7408 100%);border:1px solid #d67108;box-shadow:0 3px 0 #bd6106,0 5px 10px #cf761018}
+.lp-shell .cta-stack>.cta-orange:hover,.lp-shell .contact-form .button.primary:hover:not(:disabled){background:linear-gradient(180deg,#e78312,#cf6905);box-shadow:0 3px 0 #ad5704,0 6px 12px #cf761024}
+.lp-shell .cta-stack>.cta-secondary,.lp-shell .hero-inquiry{min-height:56px;background:#fff;color:#174d94;border:1px solid #aabfd9;box-shadow:0 2px 4px #18365d08;font-size:15px}
+.lp-shell .cta-stack>.cta-secondary:after,.lp-shell .hero-inquiry:after{background:#edf3fa}
+.lp-shell .cta-stack>.cta-secondary:hover,.lp-shell .hero-inquiry:hover{background:#f5f9fe;border-color:#638ab9}
+.lp-shell .hero-inquiry{margin-top:14px}
+.lp-shell .contact-form .button>span{position:absolute;right:17px;font-size:18px}
+.lp-shell .contact-form .button:disabled{background:#e1e6ec;color:#737f8e;border-color:#d5dce5;box-shadow:none;opacity:1;cursor:not-allowed}
+.lp-shell .postal-row>button{min-height:48px;padding:10px 12px;border:1px solid #b9cce2;border-radius:6px;background:#f4f8fd;color:#174d94;font-size:14px;line-height:1.5;white-space:nowrap}
+.lp-shell .phone-button{display:flex;align-items:center;justify-content:center;gap:14px;min-height:86px;padding:18px 14px;background:#f6f9fd;border:1px solid #b7cbe3;border-radius:8px;box-shadow:none}
+.lp-shell .phone-button:before{content:'☎';font-size:28px;color:#174d94}
+.lp-shell .phone-button span{display:flex;flex-direction:column;gap:4px}
+.lp-shell .phone-button small{font-size:14px;line-height:1.5}
+.lp-shell .phone-button b{font-family:Arial,sans-serif;font-size:30px;line-height:1.15;letter-spacing:.01em}
+.floating-cta{grid-template-columns:104px minmax(0,1fr);align-items:stretch;gap:10px;padding:10px 12px calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid #dbe4ed;box-shadow:0 -4px 16px #1634520d}
+.floating-cta>a{min-height:54px;margin:0;border-radius:7px;line-height:1.4;font-size:15px;font-weight:700;letter-spacing:0;text-align:center}
+.floating-cta .float-phone{display:flex;flex-direction:column;gap:3px;justify-content:center;align-items:center;padding:8px 4px;background:#fff;color:#174d94;border:1px solid #b7cbe3;box-shadow:none;font-size:12px}
+.floating-cta .phone-symbol{font-size:20px;line-height:1}
+.floating-cta .float-area{position:relative;display:flex;align-items:center;justify-content:center;padding:12px 27px 12px 12px;background:linear-gradient(180deg,#ef8b17,#df7408);color:#fff;border:1px solid #d67108;box-shadow:0 2px 0 #bd6106}
+.floating-cta .float-area:after{content:'›';position:absolute;right:12px;font-family:Arial,sans-serif;font-size:24px;line-height:1}
+.lp-shell :is(.cta,.hero-inquiry,.phone-button,.contact-form .button):focus-visible,.floating-cta>a:focus-visible{outline:3px solid #174d94;outline-offset:4px}
+.lp-shell .comparison-art{margin:28px 0 0;border:1px solid #dce6f1;border-radius:12px;overflow:hidden;background:#fff}
+.lp-shell .comparison-labels{padding:18px 12px;grid-template-columns:1fr 1fr;gap:10px}
+.lp-shell .comparison-art>img{aspect-ratio:4/3;object-fit:contain;width:100%;height:auto}
+.lp-shell .comparison-labels small{font-size:13px}
+.lp-shell .comparison-labels b{font-size:36px}
+.lp-shell .comparison-labels em{font-size:12px}
+.comparison-explanation{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px 12px;background:#f5f9fe;text-align:center;color:#425c7c;font-size:13px;line-height:1.7}
+.comparison-explanation strong{display:block;color:#174d94;font-size:14px;margin-bottom:4px}
+@media(max-width:390px){.lp-shell .cta-stack>.cta,.lp-shell .contact-form .button{font-size:15px;padding-inline:38px}.lp-shell .cta-stack>.cta-secondary,.lp-shell .hero-inquiry{font-size:14px;padding-inline:36px}.lp-shell .phone-button b{font-size:27px}.floating-cta{grid-template-columns:96px minmax(0,1fr);gap:8px}.floating-cta .float-area{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.lp-shell .cta,.lp-shell .hero-inquiry,.lp-shell .contact-form .button{transition:none}}
