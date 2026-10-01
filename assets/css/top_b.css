@@ -1,0 +1,10 @@
+@charset "utf-8";
+@media screen and (min-width: 769px) {
+  #id-index .visual .text-img {
+    width: 39.61%;
+    margin: 2.9% 0 0 -2.99%;
+  }
+  #id-index .visual .text-img a {
+    right: 42%;
+  }
+}

@@ -1,0 +1,91 @@
+
+/* Step 3: original hero art and Cloud Phone product details. */
+#id-index .cp-original-hero .pho img { object-fit: contain; }
+#id-index .cp-proof-strip { padding: 42px 0 34px; background: #fff; }
+.cp-proof-strip__lead { margin: 0 0 20px; color: #163f75; font-size: 2.1rem; font-weight: 700; text-align: center; }
+.cp-proof-strip__list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0; }
+.cp-proof-strip__list li { padding: 20px 10px; border: 1px solid #d8eaf4; border-radius: 16px; background: #f7fcfe; text-align: center; }
+.cp-proof-strip__list strong { display: block; color: #245da4; font-size: 2.4rem; line-height: 1.25; }
+.cp-proof-strip__list span { color: #61788e; font-size: 1.3rem; font-weight: 700; }
+.cp-source-note { margin-top: 14px; color: #6a7d8f; font-size: 1.2rem; text-align: center; }
+
+#id-index .p-reason-new .reason-list__item:nth-child(1) .reason-list__badge::before { content: "導入実績"; }
+#id-index .p-reason-new .reason-list__item:nth-child(2) .reason-list__badge::before { content: "スピード導入"; }
+#id-index .p-reason-new .reason-list__item:nth-child(3) .reason-list__badge::before { content: "コスト削減"; }
+
+#id-index .cp-function-title { padding-left: 0; }
+#id-index .cp-function-title { max-width: 980px; font-size: 4rem; }
+#id-index .cp-function-facts { margin-bottom: 56px; }
+#id-index .cp-function-facts > p { margin-bottom: 28px; text-align: center; font-size: 2rem; font-weight: 700; line-height: 1.8; }
+.cp-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 0 0 76px; }
+.cp-feature-card { display: flex; gap: 18px; min-height: 220px; padding: 28px 24px; border: 3px solid #d7edf6; border-radius: 20px; background: #fff; box-shadow: 0 14px 34px rgba(22,63,117,.08); }
+.cp-feature-card img { flex: 0 0 58px; width: 58px; height: 58px; object-fit: contain; }
+.cp-feature-card span { color: #49bfd8; font-size: 1.2rem; font-weight: 900; letter-spacing: .08em; }
+.cp-feature-card h3 { margin: 6px 0 12px; color: #163f75; font-size: 2rem; line-height: 1.45; }
+.cp-feature-card p { color: #4f667c; font-size: 1.5rem; line-height: 1.75; }
+.cp-function-list { padding: 26px 24px 18px; border-radius: 22px; background: rgba(255,255,255,.9); }
+
+.cp-benefits { background: linear-gradient(180deg, #eaf7fc, #f8fcfe); }
+.cp-benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 42px; }
+.cp-benefit-grid article { position: relative; min-height: 330px; padding: 36px 30px; border-radius: 24px; background: #fff; box-shadow: 0 14px 35px rgba(22,63,117,.1); }
+.cp-benefit-grid article > span { color: #49bfd8; font-size: 1.3rem; font-weight: 900; }
+.cp-benefit-grid img { display: block; width: 72px; height: 72px; margin: 24px auto 18px; object-fit: contain; }
+.cp-benefit-grid h3 { color: #163f75; font-size: 2.2rem; text-align: center; }
+.cp-benefit-grid p { margin-top: 15px; color: #50677d; font-size: 1.5rem; line-height: 1.8; }
+
+.cp-system .title span { color: #245da4; }
+.cp-system-box { align-items: center; }
+.cp-system-box ul { flex: 1; }
+
+.cp-cases { background: #fff; }
+.cp-case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.cp-case-grid article { padding: 30px 28px; border: 2px solid #d8eaf4; border-radius: 22px; background: #f8fcfe; box-shadow: 0 12px 28px rgba(22,63,117,.07); }
+.cp-case-tag { display: inline-block; padding: 5px 13px; border-radius: 999px; color: #245da4; background: #e0f4fa; font-size: 1.2rem; font-weight: 700; }
+.cp-case-grid h3 { margin-top: 16px; color: #163f75; font-size: 2.1rem; }
+.cp-case-grid h4 { margin-top: 12px; color: #245da4; font-size: 1.7rem; line-height: 1.55; }
+.cp-case-grid p { margin-top: 14px; color: #50677d; font-size: 1.45rem; line-height: 1.8; }
+
+.cp-price { background: linear-gradient(180deg, #edf8fc 0%, #fff 100%); }
+.cp-price-hero { display: flex; flex-direction: column; align-items: center; max-width: 760px; margin: 0 auto 38px; padding: 32px; border-radius: 24px; color: #fff; background: linear-gradient(120deg, #163f75, #245da4); box-shadow: 0 16px 34px rgba(22,63,117,.18); }
+.cp-price-hero > span { font-size: 1.8rem; font-weight: 700; }
+.cp-price-hero strong { margin: 8px 0; font-size: 5rem; line-height: 1.2; }
+.cp-price-hero strong small { font-size: 1.6rem; }
+.cp-price-hero b { padding: 8px 18px; border-radius: 999px; color: #163f75; background: #fff; font-size: 1.6rem; }
+.cp-price-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cp-price-groups section { overflow: hidden; border: 2px solid #d5e9f3; border-radius: 20px; background: #fff; }
+.cp-price-groups h3 { margin: 0; padding: 18px; color: #fff; background: #245da4; font-size: 2rem; text-align: center; }
+.cp-price-groups ul { padding: 10px 22px; }
+.cp-price-groups li { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 18px 2px; border-bottom: 1px solid #dceaf2; }
+.cp-price-groups li:last-child { border-bottom: 0; }
+.cp-price-groups li span { color: #4f667c; font-size: 1.4rem; }
+.cp-price-groups li strong { color: #163f75; font-size: 1.8rem; text-align: right; }
+.cp-price-note { margin: 24px auto 0; color: #61788e; font-size: 1.25rem; line-height: 1.7; text-align: center; }
+.cp-price-cta { width: 500px; margin: 30px auto 0; }
+.cp-price-cta a { display: block; padding: 15px 20px; border-radius: 999px; color: #fff; background: #f28b45; box-shadow: 0 8px 18px rgba(242,139,69,.25); font-size: 1.7rem; font-weight: 700; text-align: center; }
+
+@media screen and (max-width: 768px) {
+  #id-index .cp-proof-strip { padding: 28px 0 24px; }
+  .cp-proof-strip__lead { font-size: 1.6rem; }
+  .cp-proof-strip__list { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cp-proof-strip__list li { padding: 14px 7px; }
+  .cp-proof-strip__list strong { font-size: 1.8rem; }
+  #id-index .cp-function-title { font-size: 2.7rem; text-align: center; }
+  #id-index .cp-function-facts { margin-bottom: 32px; }
+  #id-index .cp-function-facts > p { font-size: 1.5rem; }
+  .cp-feature-grid { grid-template-columns: 1fr; gap: 12px; margin-bottom: 40px; }
+  .cp-feature-card { min-height: 0; padding: 20px 18px; }
+  .cp-feature-card h3 { font-size: 1.8rem; }
+  .cp-feature-card p { font-size: 1.35rem; }
+  .cp-function-list { padding: 18px 12px 8px; }
+  .cp-benefit-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
+  .cp-benefit-grid article { min-height: 0; padding: 26px 22px; }
+  .cp-benefit-grid img { margin: 18px auto 12px; }
+  .cp-case-grid { grid-template-columns: 1fr; gap: 14px; }
+  .cp-case-grid article { padding: 24px 20px; }
+  .cp-price-hero { padding: 26px 14px; }
+  .cp-price-hero strong { font-size: 3.5rem; }
+  .cp-price-hero b { font-size: 1.35rem; text-align: center; }
+  .cp-price-groups { grid-template-columns: 1fr; gap: 14px; }
+  .cp-price-cta { width: 100%; }
+  .cp-price-cta a { font-size: 1.5rem; }
+}

@@ -1,0 +1,25 @@
+/* Color-only theme. Layout, copy, sections and component geometry remain unchanged. */
+:root {
+  --cloud-phone-navy: #163f75;
+  --cloud-phone-blue: #245da4;
+  --cloud-phone-cyan: #49bfd8;
+  --cloud-phone-orange: #f28b45;
+  --cloud-phone-pale: #eaf7fc;
+}
+::selection { color: #fff; background: var(--cloud-phone-blue); }
+#id-index .l-header__inner { border-color: rgba(36, 93, 164, .12); }
+#id-index .l-menu { background: var(--cloud-phone-blue); }
+#id-index .l-cta__btn.is-trial { background-color: var(--cloud-phone-navy); }
+#id-index .l-cta__btn.is-download { background-color: var(--cloud-phone-orange); }
+#id-index .l-cta__btn.is-contact { background-color: var(--cloud-phone-cyan); }
+#id-index .l-mv__bg { background: linear-gradient(110deg, var(--cloud-phone-blue), var(--cloud-phone-cyan)); }
+#id-index .p-function { background: linear-gradient(145deg, var(--cloud-phone-navy), var(--cloud-phone-blue)); }
+#id-index .p-function .headline01 .green,
+#id-index .p-reason-new .title span,
+#id-index .p-newCase .headline01,
+#id-index .p-newFlow .headline01,
+#id-index .p-cost .headline01 { color: var(--cloud-phone-blue); }
+#id-index .p-newFlow { background-color: #f5fbfe; }
+#id-index .p-faq { background-color: var(--cloud-phone-pale); }
+#id-index .p-contact { background: linear-gradient(145deg, var(--cloud-phone-navy), var(--cloud-phone-blue)); }
+#id-index .l-footer { background-color: #102f57; }

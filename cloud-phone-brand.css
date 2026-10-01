@@ -1,0 +1,77 @@
+/* Step 2: brand identity and hero copy only. */
+#id-index .l-header__logo img[src*="cloud-phone-logo"] {
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+}
+#id-index .visual .text-img img[src*="hero-copy"] {
+  object-fit: contain;
+}
+#id-index img[src*="cloud-phone-logo-white"] {
+  width: 258px;
+  height: auto;
+  object-fit: contain;
+}
+#id-index .l-mv__linkList img[src*="document-cta"] {
+  object-fit: contain;
+}
+#id-index .p-function {
+  color: #173a63;
+  background: linear-gradient(180deg, #edf8fc 0%, #f8fcfe 42%, #ffffff 100%);
+}
+#id-index .p-function .headline01,
+#id-index .p-function .headline02 {
+  color: #163f75;
+}
+#id-index .p-function .headline01 {
+  max-width: 100%;
+  font-size: 4.4rem;
+}
+#id-index .p-function .headline01 .green,
+#id-index .p-function .img_list h3 .green {
+  color: #2f82bd;
+}
+#id-index .p-function .headline01 .line::before {
+  background-color: #ffd8bc;
+}
+#id-index .p-function .info > p {
+  color: #3f5d78;
+}
+#id-index .p-function .img_list > li {
+  color: #173a63;
+  background: rgba(255, 255, 255, .96);
+  border-color: #d7edf6;
+  box-shadow: 0 14px 34px rgba(22, 63, 117, .09);
+}
+#id-index .p-function .img_list h3,
+#id-index .p-function .textInfo p {
+  color: #173a63;
+}
+#id-index .p-function .img_list h3 .num,
+#id-index .p-function .list_ul .lineBox {
+  color: #245da4;
+}
+#id-index .p-function .img_list h3 .num span::before {
+  background: rgba(73, 191, 216, .18);
+}
+#id-index .p-function .list_ul .lineBox {
+  border-color: #49bfd8;
+}
+#id-index #section-function,
+#id-index #section-case,
+#id-index #section-flow,
+#id-index #section-price,
+#id-index #section-faq,
+#id-index #section-contact {
+  scroll-margin-top: 115px;
+}
+@media screen and (max-width: 767px) {
+  #id-index .l-header__logo img[src*="cloud-phone-logo"] { width: 145px; }
+  #id-index .p-function .headline01 { font-size: 2.6rem; }
+  #id-index #section-function,
+  #id-index #section-case,
+  #id-index #section-flow,
+  #id-index #section-price,
+  #id-index #section-faq,
+  #id-index #section-contact { scroll-margin-top: 70px; }
+}

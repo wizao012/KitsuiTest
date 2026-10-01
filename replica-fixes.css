@@ -1,0 +1,27 @@
+/* Static-preview safety and small compatibility fixes only. */
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; }
+.fixbanner--seminar,
+.l-download,
+.l-trial,
+.l-self { display: none !important; }
+.visual .slide { position: relative; aspect-ratio: 917 / 822; overflow: hidden; }
+.visual .slide .pho { position: absolute; inset: 0; width: 100%; opacity: 0; transition: opacity .7s ease; }
+.visual .slide .pho:first-child { opacity: 1; }
+.visual .slide .pho[aria-hidden="true"] { opacity: 0; pointer-events: none; }
+.visual .slide .pho[aria-hidden="false"] { opacity: 1; }
+.static-form-note {
+  display: none;
+  margin-top: 12px;
+  color: #e35e18;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.static-form-note.is-visible { display: block; }
+@media (max-width: 767px) {
+  .visual .slide { aspect-ratio: 750 / 520; }
+  body.menu-open { overflow: hidden; }
+  .js-sp-menu.is-open { display: block !important; opacity: 1; visibility: visible; }
+}

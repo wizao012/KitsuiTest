@@ -1,0 +1,61 @@
+
+/* GitHub release: benefits, direct contact CTAs, and restrained motion. */
+.cp-outcomes { padding: 92px 0 98px; overflow: hidden; background: linear-gradient(180deg, #fff 0%, #eef9fd 100%); }
+.cp-outcomes__eyebrow { margin: 0 0 10px; color: #49bfd8; font-size: 1.5rem; font-weight: 900; letter-spacing: .12em; text-align: center; }
+.cp-outcomes__title { margin: 0; color: #163f75; font-size: 4rem; line-height: 1.35; text-align: center; }
+.cp-outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 46px; }
+.cp-outcome-card { position: relative; min-height: 360px; padding: 34px 30px 30px; overflow: hidden; border: 2px solid #d8edf6; border-radius: 26px; background: #fff; box-shadow: 0 16px 38px rgba(22,63,117,.1); }
+.cp-outcome-card::after { position: absolute; right: -45px; bottom: -55px; width: 145px; height: 145px; border-radius: 50%; background: rgba(73,191,216,.1); content: ""; }
+.cp-outcome-icon { display: grid; width: 76px; height: 76px; margin-bottom: 24px; place-items: center; border-radius: 50%; background: #eaf7fc; }
+.cp-outcome-icon::after { position: absolute; width: 76px; height: 76px; border: 2px solid rgba(73,191,216,.55); border-radius: 50%; content: ""; animation: cpPulse 2.8s ease-out infinite; }
+.cp-outcome-icon img { width: 48px; height: 48px; object-fit: contain; }
+.cp-outcome-card > span { color: #49bfd8; font-size: 1.2rem; font-weight: 900; letter-spacing: .08em; }
+.cp-outcome-card h3 { margin: 8px 0 15px; color: #163f75; font-size: 2.5rem; }
+.cp-outcome-card p { color: #50677d; font-size: 1.5rem; line-height: 1.85; }
+.cp-outcome-card b { display: inline-block; margin-top: 20px; padding: 7px 14px; border-radius: 999px; color: #245da4; background: #eaf7fc; font-size: 1.35rem; }
+.cp-outcome-actions { display: flex; justify-content: center; gap: 16px; margin-top: 36px; }
+.cp-outcome-actions a { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 330px; min-height: 76px; border-radius: 999px; color: #fff; font-size: 1.8rem; font-weight: 800; box-shadow: 0 10px 24px rgba(22,63,117,.16); transition: transform .25s, box-shadow .25s; }
+.cp-outcome-actions a:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(22,63,117,.2); }
+.cp-outcome-actions small { font-size: 1.15rem; font-weight: 600; }
+.cp-action-web { background: #245da4; }
+.cp-action-phone { background: #f28b45; }
+
+#id-index .cp-original-hero img { animation: cpHeroFloat 5.5s ease-in-out infinite; transform-origin: 52% 55%; }
+#id-index .cp-direct-actions li:first-child a { background-color: #163f75; }
+#id-index .cp-direct-actions li.pink a { background-color: #f28b45; }
+#id-index .l-cta__btn.is-download { animation: cpSoftGlow 3s ease-in-out infinite; }
+#id-index .c-contact .link.pink a { background: #f28b45; }
+#id-index .c-contact .link.pink a::before { background-color: #f28b45; }
+
+.js-reveal { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.75,.25,1); }
+.js-reveal.is-visible { opacity: 1; transform: translateY(0); }
+.cp-outcome-card:nth-child(2) { transition-delay: .12s; }
+.cp-outcome-card:nth-child(3) { transition-delay: .24s; }
+
+@keyframes cpHeroFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-8px) scale(1.008); } }
+@keyframes cpPulse { 0% { opacity: .65; transform: scale(.88); } 70%,100% { opacity: 0; transform: scale(1.28); } }
+@keyframes cpSoftGlow { 0%,100% { box-shadow: 0 4px 12px rgba(242,139,69,.18); } 50% { box-shadow: 0 7px 22px rgba(242,139,69,.42); } }
+
+/* The source design uses a 1160px desktop canvas. Scale that canvas at tablet widths
+   so the content stays reviewable instead of being cropped horizontally. */
+@media screen and (min-width: 769px) and (max-width: 849px) { body { zoom: .66; } }
+@media screen and (min-width: 850px) and (max-width: 949px) { body { zoom: .73; } }
+@media screen and (min-width: 950px) and (max-width: 1049px) { body { zoom: .82; } }
+@media screen and (min-width: 1050px) and (max-width: 1159px) { body { zoom: .90; } }
+
+@media screen and (max-width: 768px) {
+  #id-index .visual .text-img img { display: block; width: 100% !important; max-width: 100% !important; height: auto !important; }
+  .cp-outcomes { padding: 55px 0 60px; }
+  .cp-outcomes__title { font-size: 2.7rem; }
+  .cp-outcome-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 30px; }
+  .cp-outcome-card { min-height: 0; padding: 26px 22px; }
+  .cp-outcome-card h3 { font-size: 2.2rem; }
+  .cp-outcome-card p { font-size: 1.4rem; }
+  .cp-outcome-actions { flex-direction: column; gap: 10px; }
+  .cp-outcome-actions a { min-width: 0; width: 100%; min-height: 68px; font-size: 1.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .js-reveal { opacity: 1; transform: none; }
+}

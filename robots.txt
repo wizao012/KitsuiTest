@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://cloud-ph.com/ivr/sitemap.xml
