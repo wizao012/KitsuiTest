@@ -102,3 +102,67 @@
     sync();
   });
 })();
+
+(() => {
+  const flows = Array.from(document.querySelectorAll('[data-universal-flow]'));
+  if (!flows.length) return;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const sleep = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
+
+  flows.forEach((flow) => {
+    const track = flow.querySelector('[data-uf-track]');
+    const slides = Array.from(flow.querySelectorAll('[data-uf-slide]'));
+    const tabs = Array.from(flow.querySelectorAll('[data-uf-go]'));
+    if (!track || slides.length < 2 || tabs.length !== slides.length) return;
+
+    let current = 0;
+    let timer = 0;
+    let runToken = 0;
+
+    const typeSlide = async (slide, token) => {
+      const field = slide.querySelector('[data-uf-typing]');
+      if (!field) return;
+      const copy = field.dataset.ufTyping || '';
+      field.textContent = '';
+      if (reducedMotion) {
+        field.textContent = copy;
+        return;
+      }
+      await sleep(500);
+      for (let index = 0; index < copy.length; index += 1) {
+        if (token !== runToken) return;
+        field.textContent += copy[index];
+        await sleep(52 + Math.random() * 34);
+      }
+    };
+
+    const restartProgress = () => {
+      flow.classList.remove('is-running');
+      void flow.offsetWidth;
+      flow.classList.add('is-running');
+    };
+
+    const show = (index, userTriggered = false) => {
+      current = (index + slides.length) % slides.length;
+      runToken += 1;
+      track.style.transform = `translateX(-${current * 33.333333}%)`;
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('is-active', slideIndex === current);
+        const field = slide.querySelector('[data-uf-typing]');
+        if (field && slideIndex !== current) field.textContent = '';
+      });
+      tabs.forEach((tab, tabIndex) => tab.setAttribute('aria-selected', String(tabIndex === current)));
+      restartProgress();
+      typeSlide(slides[current], runToken);
+      window.clearTimeout(timer);
+      if (!reducedMotion) timer = window.setTimeout(() => show(current + 1), userTriggered ? 6200 : 5200);
+    };
+
+    tabs.forEach((tab) => tab.addEventListener('click', () => show(Number(tab.dataset.ufGo), true)));
+    document.addEventListener('visibilitychange', () => {
+      window.clearTimeout(timer);
+      if (!document.hidden && !reducedMotion) timer = window.setTimeout(() => show(current + 1), 5200);
+    });
+    show(0);
+  });
+})();
