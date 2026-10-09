@@ -172,8 +172,20 @@
     padding: 5px 34px 5px 10px !important;
   }
   #id-index .cp-direct-choice > a small { font-size: .86rem; }
-  #id-index .cp-direct-choice > a strong { font-size: 1.42rem; }
-  #id-index .cp-direct-choice > a em { margin-top: 4px; font-size: .96rem; }
+  #id-index .cp-direct-choice > a strong { font-size: 1.72rem; line-height: 1.3; }
+  #id-index .cp-direct-choice > a em { margin-top: 4px; font-size: 1.16rem; }
+  #id-index .cp-direct-choice--phone { grid-template-columns: 58px minmax(0,1fr) !important; }
+  #id-index .cp-direct-choice--phone .cp-direct-choice__art {
+    width: 52px;
+    height: 52px;
+  }
+  #id-index .cp-direct-choice--phone .cp-direct-choice__art img {
+    width: 36px !important;
+    height: 36px !important;
+    filter: none;
+  }
+  #id-index .cp-direct-choice--phone > a strong { font-size: 1.82rem; }
+  #id-index .cp-direct-choice--phone > a em { font-size: 1.46rem; }
   #id-index .cp-direct-choice > a em span {
     right: 7px;
     width: 23px;
@@ -271,7 +283,7 @@
   #id-index .cp-outcome-card--natural .cp-outcome-copy p {
     min-height: 0;
     margin: 8px 0 11px;
-    font-size: 1.12rem;
+    font-size: 1.3rem;
     line-height: 1.65;
   }
   #id-index .cp-outcome-card--natural .cp-outcome-copy b {
@@ -386,7 +398,7 @@
   }
   #id-index .cp-industry-scene p {
     margin-bottom: 10px;
-    font-size: 1.12rem;
+    font-size: 1.28rem;
     line-height: 1.6;
   }
   #id-index .cp-industry-scene b {
@@ -429,7 +441,7 @@
   }
   #id-index .cp-case-grid p {
     margin-top: 9px;
-    font-size: 1.25rem;
+    font-size: 1.32rem;
     line-height: 1.7;
   }
 
@@ -499,4 +511,286 @@
   #id-index .cp-industry-scene { grid-template-columns: 40% minmax(0,60%); }
   #id-index .cp-industry-scene > div { padding-right: 11px; padding-left: 11px; }
   #id-index .cp-industry-scene h3 { font-size: 1.43rem; }
+}
+
+/* 2026-10-07: compact CTA and a more focused mobile FV animation. */
+@media screen and (max-width: 768px) {
+  #id-index .visual {
+    padding-top: 66px;
+    padding-right: 8px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+  }
+
+  #id-index .visual .text-img {
+    max-width: 390px;
+    margin-bottom: 10px;
+  }
+
+  #id-index .visual .slide.cp-universal-hero {
+    width: 100%;
+    max-width: 420px;
+    height: 500px;
+    margin: 0 auto;
+    border-color: #bfe2eb;
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(23,71,127,.12);
+  }
+
+  #id-index .visual .cp-uflow__head {
+    height: 57px;
+    padding: 8px 11px 8px 14px;
+    border-bottom: 1px solid #dcecf1;
+    background: linear-gradient(180deg,#fff 0%,#fbfdfe 100%);
+  }
+
+  #id-index .visual .cp-uflow__head small {
+    font-size: .73rem;
+    letter-spacing: .13em;
+  }
+
+  #id-index .visual .cp-uflow__head strong {
+    margin-top: 1px;
+    font-size: 1.45rem;
+  }
+
+  #id-index .visual .cp-uflow__tabs {
+    gap: 4px;
+    padding: 3px;
+    border: 1px solid #d9eaf0;
+    border-radius: 12px;
+    background: #f3f9fb;
+  }
+
+  #id-index .visual .cp-uflow__tabs button {
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 9px;
+    font-size: 1rem;
+    box-shadow: none;
+  }
+
+  #id-index .visual .cp-uflow__tabs button[aria-selected="true"] {
+    box-shadow: 0 5px 12px rgba(45,110,184,.22);
+  }
+
+  #id-index .visual .cp-uflow__window {
+    inset: 57px 0 4px;
+  }
+
+  #id-index .visual .cp-uflow__slide {
+    padding: 14px 14px 12px;
+  }
+
+  #id-index .visual .cp-uflow__step {
+    padding: 4px 8px;
+    font-size: .82rem;
+    box-shadow: 0 4px 12px rgba(23,71,127,.07);
+  }
+
+  #id-index .visual .cp-uflow__slide h2 {
+    margin: 7px 0 3px;
+    font-size: 2.05rem;
+    line-height: 1.3;
+  }
+
+  #id-index .visual .cp-uflow__lead {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  #id-index .visual .cp-uflow__visual {
+    min-height: 226px;
+    margin-top: 7px;
+  }
+
+  #id-index .visual .cp-uflow__benefit {
+    min-height: 36px;
+    margin-top: 4px;
+    padding: 7px 9px;
+    border-radius: 12px;
+    font-size: .94rem;
+    line-height: 1.35;
+  }
+
+  #id-index .visual .cp-uflow__benefit::before {
+    width: 19px;
+    height: 19px;
+    font-size: .9rem;
+  }
+
+  /* Step 1: show an incoming call and the actual automatic reply in one view. */
+  #id-index .visual .cp-uflow__incoming {
+    top: 0;
+    padding: 10px 11px;
+    border-radius: 14px;
+  }
+
+  #id-index .visual .cp-uflow__incoming small { font-size: .78rem; }
+  #id-index .visual .cp-uflow__incoming strong {
+    margin-top: 3px;
+    font-size: 1.38rem;
+  }
+  #id-index .visual .cp-uflow__incoming b {
+    margin-top: 5px;
+    padding: 4px 7px;
+    font-size: .78rem;
+  }
+
+  #id-index .visual .cp-uflow__path {
+    top: 78px;
+    right: 50%;
+    left: 50%;
+    width: 3px;
+    height: 31px;
+  }
+
+  #id-index .visual .cp-uflow__reception {
+    top: 106px;
+    border-radius: 14px;
+  }
+  #id-index .visual .cp-uflow__reception > strong {
+    padding: 8px 10px;
+    font-size: .76rem;
+  }
+  #id-index .visual .cp-uflow__reception > small {
+    padding: 7px 10px 0;
+    font-size: .72rem;
+  }
+  #id-index .visual .cp-uflow__reception > p {
+    min-height: 49px;
+    margin: 4px 8px 0;
+    padding: 7px 8px;
+    font-size: .93rem;
+    line-height: 1.45;
+  }
+  #id-index .visual .cp-uflow__wave { height: 18px; }
+
+  /* Step 2: keep the transcript large, then summarize it in three short fields. */
+  #id-index .visual .cp-uflow__transcript {
+    padding: 10px;
+    border-radius: 14px;
+  }
+  #id-index .visual .cp-uflow__transcript header { padding-bottom: 7px; }
+  #id-index .visual .cp-uflow__transcript header strong { font-size: .98rem; }
+  #id-index .visual .cp-uflow__transcript header span { font-size: .78rem; }
+  #id-index .visual .cp-uflow__transcript > p {
+    min-height: 58px;
+    margin-top: 7px;
+    padding: 8px;
+    font-size: .95rem;
+    line-height: 1.45;
+  }
+  #id-index .visual .cp-uflow__memo {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 5px;
+    margin-top: 6px;
+  }
+  #id-index .visual .cp-uflow__memo > span {
+    display: block;
+    min-width: 0;
+    padding: 6px;
+  }
+  #id-index .visual .cp-uflow__memo small { font-size: .68rem; }
+  #id-index .visual .cp-uflow__memo strong {
+    margin-top: 2px;
+    font-size: .78rem;
+    line-height: 1.35;
+  }
+
+  /* Step 3: notification moves horizontally into the member's phone. */
+  #id-index .visual .cp-uflow__summary {
+    top: 21px;
+    left: 0;
+    width: 52%;
+    padding: 10px;
+    border-radius: 14px;
+  }
+  #id-index .visual .cp-uflow__summary small { font-size: .72rem; }
+  #id-index .visual .cp-uflow__summary strong {
+    margin-top: 4px;
+    font-size: 1.05rem;
+  }
+  #id-index .visual .cp-uflow__summary p {
+    margin-top: 5px;
+    font-size: .74rem;
+  }
+  #id-index .visual .cp-uflow__route {
+    top: 82px;
+    right: 32%;
+    left: 52%;
+    width: auto;
+    height: 3px;
+    background: repeating-linear-gradient(90deg,#2d6eb8 0 9px,transparent 9px 16px);
+  }
+  #id-index .visual .cp-uflow__slide.is-active .cp-uflow__route::after {
+    animation-name: cpUfTravel;
+  }
+  #id-index .visual .cp-uflow__phone {
+    top: 8px;
+    right: 1%;
+    width: 30%;
+    height: 194px;
+    border-width: 5px;
+    border-radius: 21px;
+    transform: none;
+  }
+  #id-index .visual .cp-uflow__phone small { font-size: .56rem; }
+  #id-index .visual .cp-uflow__phone strong { font-size: .72rem; }
+  #id-index .visual .cp-uflow__phone b { font-size: .68rem; }
+  #id-index .visual .cp-uflow__visual--connect mark {
+    bottom: 4px;
+    left: 7%;
+    transform: translateY(10px);
+  }
+  #id-index .visual .cp-uflow__slide.is-active .cp-uflow__visual--connect mark {
+    animation-name: cpUfPop;
+  }
+
+  #id-index .visual .cp-uflow__progress { height: 4px; }
+
+  /* The approved CTA artwork is cropped around its useful content. */
+  #id-index .cp-mid-cta.cp-mid-cta--image {
+    padding: 18px 14px;
+    overflow: clip;
+  }
+
+  #id-index .cp-cta-image-wrap {
+    width: min(100%,360px);
+    max-width: 360px;
+    aspect-ratio: 1024 / 1210;
+    border-radius: 20px;
+  }
+
+  #id-index .cp-cta-image-wrap picture,
+  #id-index .cp-cta-image-wrap img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #id-index .cp-cta-image-wrap img { transform: translateY(-7%); }
+
+  #id-index .cp-cta-hotspot {
+    left: 5.2%;
+    width: 89.6%;
+    height: 29%;
+    border-radius: 24px;
+  }
+  #id-index .cp-cta-hotspot--web { top: 35%; }
+  #id-index .cp-cta-hotspot--phone {
+    top: 65.5%;
+    right: auto;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  #id-index .visual .slide.cp-universal-hero { height: 492px; }
+  #id-index .visual .cp-uflow__slide h2 { font-size: 1.9rem; }
+  #id-index .visual .cp-uflow__lead { font-size: .94rem; }
+  #id-index .visual .cp-uflow__visual { min-height: 222px; }
+  #id-index .cp-cta-image-wrap {
+    width: min(100%,340px);
+    max-width: 340px;
+  }
 }

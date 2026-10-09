@@ -114,6 +114,7 @@
     const slides = Array.from(flow.querySelectorAll('[data-uf-slide]'));
     const tabs = Array.from(flow.querySelectorAll('[data-uf-go]'));
     if (!track || slides.length < 2 || tabs.length !== slides.length) return;
+    const duration = Number(flow.dataset.ufDuration) || 5200;
 
     let current = 0;
     let timer = 0;
@@ -136,7 +137,8 @@
       }
     };
 
-    const restartProgress = () => {
+    const restartProgress = (nextDuration) => {
+      flow.style.setProperty('--cp-flow-duration', `${nextDuration}ms`);
       flow.classList.remove('is-running');
       void flow.offsetWidth;
       flow.classList.add('is-running');
@@ -148,21 +150,136 @@
       track.style.transform = `translateX(-${current * 33.333333}%)`;
       slides.forEach((slide, slideIndex) => {
         slide.classList.toggle('is-active', slideIndex === current);
+        slide.setAttribute('aria-hidden', String(slideIndex !== current));
         const field = slide.querySelector('[data-uf-typing]');
         if (field && slideIndex !== current) field.textContent = '';
       });
       tabs.forEach((tab, tabIndex) => tab.setAttribute('aria-selected', String(tabIndex === current)));
-      restartProgress();
+      const nextDuration = userTriggered ? duration + 1000 : duration;
+      restartProgress(nextDuration);
       typeSlide(slides[current], runToken);
       window.clearTimeout(timer);
-      if (!reducedMotion) timer = window.setTimeout(() => show(current + 1), userTriggered ? 6200 : 5200);
+      if (!reducedMotion) timer = window.setTimeout(() => show(current + 1), nextDuration);
     };
 
     tabs.forEach((tab) => tab.addEventListener('click', () => show(Number(tab.dataset.ufGo), true)));
     document.addEventListener('visibilitychange', () => {
       window.clearTimeout(timer);
-      if (!document.hidden && !reducedMotion) timer = window.setTimeout(() => show(current + 1), 5200);
+      if (!document.hidden && !reducedMotion) timer = window.setTimeout(() => show(current + 1), duration);
     });
     show(0);
   });
+})();
+
+// C hero: keep the phone fixed while response, memo and notification change.
+(() => {
+  const root = document.querySelector('[data-c-flow]');
+  if (!root) return;
+  const scenes = Array.from(root.querySelectorAll('[data-c-scene]'));
+  const screens = Array.from(root.querySelectorAll('[data-c-screen]'));
+  const tabs = Array.from(root.querySelectorAll('[data-c-go]'));
+  const pauseButton = root.querySelector('[data-c-pause]');
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let active = 0;
+  let playing = !motionPreference.matches;
+  let inView = true;
+  let cycleTimer = 0;
+  let typingTimer = 0;
+  const duration = 6500;
+
+  const schedule = () => {
+    window.clearTimeout(cycleTimer);
+    if (playing && inView && !document.hidden) {
+      cycleTimer = window.setTimeout(() => show(active + 1), duration);
+    }
+  };
+  const syncPause = () => {
+    root.classList.toggle('is-paused', !playing);
+    pauseButton.setAttribute('aria-pressed', String(!playing));
+    pauseButton.setAttribute('aria-label', playing ? 'アニメーションを一時停止' : 'アニメーションを再生');
+    pauseButton.querySelector('span').textContent = playing ? 'Ⅱ' : '▶';
+  };
+  const typeResponse = (scene) => {
+    window.clearInterval(typingTimer);
+    const target = scene.querySelector('[data-c-typing]');
+    const text = window.matchMedia('(max-width: 768px)').matches && target.dataset.cTypingMobile ? target.dataset.cTypingMobile : target.dataset.cTyping;
+    target.setAttribute('aria-label', text);
+    scene.classList.remove('is-typed');
+    if (motionPreference.matches) {
+      target.textContent = text;
+      scene.classList.add('is-typed');
+      return;
+    }
+    const characters = Array.from(text);
+    let count = 0;
+    let delay = 6;
+    target.textContent = '';
+    typingTimer = window.setInterval(() => {
+      if (!playing || !inView || document.hidden) return;
+      if (delay-- > 0) return;
+      count += 1;
+      target.textContent = characters.slice(0, count).join('');
+      if (count >= characters.length) {
+        window.clearInterval(typingTimer);
+        scene.classList.add('is-typed');
+      }
+    }, 65);
+  };
+  const show = (index, focusTab = false) => {
+    active = (index + scenes.length) % scenes.length;
+    scenes.forEach((scene, i) => {
+      scene.classList.remove('is-active');
+      scene.setAttribute('aria-hidden', String(i !== active));
+    });
+    // Restart the staged bubble / notification entrance on every selection.
+    void scenes[active].offsetWidth;
+    scenes[active].classList.add('is-active');
+    screens.forEach((screen, i) => screen.classList.toggle('is-active', i === active));
+    tabs.forEach((tab, i) => {
+      tab.setAttribute('aria-selected', String(i === active));
+      tab.tabIndex = i === active ? 0 : -1;
+    });
+    if (focusTab) tabs[active].focus();
+    typeResponse(scenes[active]);
+    if (!playing && !motionPreference.matches) {
+      const target = scenes[active].querySelector('[data-c-typing]');
+      target.textContent = window.matchMedia('(max-width: 768px)').matches && target.dataset.cTypingMobile ? target.dataset.cTypingMobile : target.dataset.cTyping;
+      scenes[active].classList.add('is-typed');
+      window.clearInterval(typingTimer);
+    }
+    schedule();
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => show(index));
+    tab.addEventListener('keydown', (event) => {
+      let next = null;
+      if (event.key === 'ArrowRight') next = active + 1;
+      if (event.key === 'ArrowLeft') next = active - 1;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = scenes.length - 1;
+      if (next !== null) {
+        event.preventDefault();
+        show(next, true);
+      }
+    });
+  });
+  pauseButton.addEventListener('click', () => {
+    playing = !playing;
+    syncPause();
+    schedule();
+  });
+  document.addEventListener('visibilitychange', schedule);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      inView = entries[0].isIntersecting;
+      schedule();
+    }, { threshold: .15 }).observe(root);
+  }
+  motionPreference.addEventListener('change', () => {
+    playing = !motionPreference.matches;
+    syncPause();
+    show(active);
+  });
+  syncPause();
+  show(0);
 })();

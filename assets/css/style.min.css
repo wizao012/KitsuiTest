@@ -8,7 +8,7 @@
 .case-inner__link:hover span,
 .l-fixfoot__btn.is-download:hover span:before,
 .l-mv__btnList .c-btn02.is-download:hover span:before {
-	background-image: url(../img/common/icon/download-green.svg)
+	background-image: none
 }
 
 button,
@@ -483,7 +483,7 @@ textarea {
 .case-inner__link span {
 	display: inline-block;
 	padding-left: 40px;
-	background: url(../img/common/icon/download-white.png) left center/26px auto no-repeat
+	background: none left center/26px auto no-repeat
 }
 
 .case-inner__link:hover {
@@ -1158,7 +1158,7 @@ textarea {
 .l-fixfoot__btn.is-download span:before {
 	width: 26px;
 	height: 30px;
-	background: url(../img/common/icon/download-white.svg) 0 0/cover
+	background: none 0 0/cover
 }
 
 .l-fixfoot__btn.is-download:hover {
@@ -1177,7 +1177,7 @@ textarea {
 .l-fixfoot__btn.is-contact span:before {
 	width: 24px;
 	height: 24px;
-	background: url(../img/common/icon/calendar-black.png) 0 0/cover
+	background: none 0 0/cover
 }
 
 .l-fixfoot__btn.is-trial {
@@ -1194,7 +1194,7 @@ textarea {
 .l-fixfoot__btn.is-trial span:before {
 	width: 35px;
 	height: 26px;
-	background: url(../img/common/icon/trial-black.png) 0 0/cover
+	background: none 0 0/cover
 }
 
 .l-fixfoot__btn.is-pagetop {
@@ -1216,7 +1216,7 @@ textarea {
 .l-fixfoot__btn.is-pagetop span:before {
 	width: 16px;
 	height: 16px;
-	background: url(../img/common/icon/pagetop.svg) center/cover no-repeat
+	background: none center/cover no-repeat
 }
 
 #id-thanks .p-thanks__btn .c-btn:hover,
@@ -1227,7 +1227,7 @@ textarea {
 }
 
 .l-fixfoot__btn.is-pagetop:hover span:before {
-	background-image: url(../img/common/icon/pagetop-black.svg)
+	background-image: none
 }
 
 .is-hidden-scroll .l-fixfoot {
@@ -1455,7 +1455,7 @@ textarea {
 		color: #163f75
 	}
 	.l-cta__btn.is-trial:hover span::after {
-		background-image: url(../img/common/icon/trial-blue3.svg)
+		background-image: none
 	}
 }
 
@@ -1922,7 +1922,7 @@ textarea {
 	}
 
 	.l-cta__btn.is-download:hover span:after {
-		background-image: url(../img/common/icon/download-white.svg)
+		background-image: none
 	}
 
 	.l-download,
@@ -2060,7 +2060,7 @@ textarea {
 
 .c-cta__list .c-btn02.is-trial span::before,
 .l-mv__btnList .c-btn02.is-trial span::before {
-	background: url(../img/common/icon/trial-white2.svg) 0 0/cover;
+	background: none 0 0/cover;
 	transition: background-image;
 	width: 32px;
 	height: 24px;
@@ -2069,7 +2069,7 @@ textarea {
 
 .c-cta__list .c-btn02.is-trial:hover span::before,
 .l-mv__btnList .c-btn02.is-trial:hover span::before {
-	background: url(../img/common/icon/trial-blue2.svg)
+	background: none
 }
 
 .c-cta__demo.l-demo {
@@ -2171,12 +2171,12 @@ textarea {
 .c-btn02.is-download span:before {
 	width: 26px;
 	height: 30px;
-	background-image: url(../img/common/icon/download-white.svg);
+	background-image: none;
 	background-size: cover
 }
 
 .c-btn02.is-download:hover span:before {
-	background-image: url(../img/common/icon/download-black.svg)
+	background-image: none
 }
 
 .c-btn02.is-contact {
@@ -2201,7 +2201,7 @@ textarea {
 .c-btn02.is-trial span:before {
 	width: 28px;
 	height: 21px;
-	background: url(../img/common/icon/trial-black.png) 0 0/cover
+	background: none 0 0/cover
 }
 
 .c-cta__list .c-btn02.is-trial {
@@ -2385,7 +2385,7 @@ textarea {
 .c-tbl__eval.is-standard:before {
 	width: 32px;
 	height: 28px;
-	background-image: url(../img/common/icon/eval-standard.svg)
+	background-image: none
 }
 
 .c-tbl__eval.is-bad {
@@ -2395,13 +2395,13 @@ textarea {
 .c-tbl__eval.is-bad:before {
 	width: 20px;
 	height: 20px;
-	background-image: url(../img/common/icon/eval-bad.svg)
+	background-image: none
 }
 
 .c-tbl__eval.is-good:before {
 	width: 30px;
 	height: 30px;
-	background-image: url(../img/common/icon/eval-good.svg)
+	background-image: none
 }
 
 .c-sec {
@@ -2500,7 +2500,7 @@ textarea {
 .c-merit__tip {
 	width: 140px;
 	height: 140px;
-	background: url(../img/common/bg/merit_label.png) 0 0/cover no-repeat;
+	background: none 0 0/cover no-repeat;
 	color: #fff;
 	font-size: 2.6rem;
 	line-height: 1.4;
@@ -2745,7 +2745,7 @@ textarea {
 	left: 20px;
 	width: 12px;
 	height: 20px;
-	background: url(../img/common/icon/voice-green.svg) center/cover no-repeat
+	background: none center/cover no-repeat
 }
 
 .c-flow__detail,
@@ -2850,7 +2850,7 @@ textarea {
 	width: 6px;
 	height: 31px;
 	bottom: -27px;
-	background: url(../img/common/bg/flow_dots.png) no-repeat;
+	background: none no-repeat;
 	z-index: 1
 }
 
@@ -2911,7 +2911,7 @@ textarea {
 .c-flow__item.is-step01 .c-flow__step:after {
 	width: 61px;
 	height: 42px;
-	background-image: url(../img/common/icon/step01-green.svg)
+	background-image: none
 }
 
 .c-flow__item.is-step02 .c-flow__step {
@@ -2921,7 +2921,7 @@ textarea {
 .c-flow__item.is-step02 .c-flow__step:after {
 	width: 39px;
 	height: 60px;
-	background-image: url(../img/common/icon/step02-green.svg)
+	background-image: none
 }
 
 .c-flow__item.is-step03 .c-flow__step {
@@ -2931,7 +2931,7 @@ textarea {
 .c-flow__item.is-step03 .c-flow__step:after {
 	width: 51px;
 	height: 50px;
-	background-image: url(../img/common/icon/step03-green.svg)
+	background-image: none
 }
 
 .c-flow__item.is-step04 .c-flow__step {
@@ -2941,7 +2941,7 @@ textarea {
 .c-flow__item.is-step04 .c-flow__step:after {
 	width: 51px;
 	height: 51px;
-	background-image: url(../img/common/icon/step04-green.svg);
+	background-image: none;
 	-webkit-transform: translateX(5px);
 	-ms-transform: translateX(5px);
 	transform: translateX(5px)
@@ -3002,7 +3002,7 @@ textarea {
 }
 
 .c-price__block.is-entry .c-price__blockLabel {
-	background: url(../img/index/price_bg_entry.png) bottom center/cover no-repeat
+	background: none bottom center/cover no-repeat
 }
 
 .c-price__block.is-standard {
@@ -3010,7 +3010,7 @@ textarea {
 }
 
 .c-price__block.is-standard .c-price__blockLabel {
-	background: url(../img/index/price_bg_standard.png) bottom center/cover no-repeat
+	background: none bottom center/cover no-repeat
 }
 
 .c-price__blockTtl {
@@ -3435,7 +3435,7 @@ textarea {
 
 #id-index .p-form__item.is_error .p-form__ttl:after,
 .c-form__error:before {
-	background: url(../img/common/icon/alert01.png) no-repeat
+	background: none no-repeat
 }
 
 .c-form__radioItem {
@@ -3770,7 +3770,7 @@ textarea {
 #id-index .p-catch {
 	padding-top: 55px;
 	padding-bottom: 65px;
-	background: url(../img/index/catch_bg.jpg) center/cover no-repeat;
+	background: none center/cover no-repeat;
 	color: #fff
 }
 
@@ -3786,7 +3786,7 @@ textarea {
 }
 
 #id-index .p-problem {
-	background: url(../img/index/problem_bg.jpg);
+	background: none;
 	position: relative
 }
 
@@ -3797,7 +3797,7 @@ textarea {
 	width: 260px;
 	height: 114px;
 	position: absolute;
-	background: url(../img/index/problem_arrow.svg) no-repeat;
+	background: none no-repeat;
 	left: 0;
 	right: 0;
 	bottom: -67px
@@ -3838,7 +3838,7 @@ textarea {
 	right: -220px;
 	width: 294px;
 	height: 300px;
-	background-image: url(../img/index/problem_step02.svg)
+	background-image: none
 }
 
 #id-index .p-problem__item:nth-child(2) {
@@ -3850,7 +3850,7 @@ textarea {
 	left: -293px;
 	width: 307px;
 	height: 300px;
-	background-image: url(../img/index/problem_step01.svg)
+	background-image: none
 }
 
 #id-index .p-problem__item:nth-child(3) {
@@ -3862,7 +3862,7 @@ textarea {
 	left: -120px;
 	width: 144px;
 	height: 301px;
-	background-image: url(../img/index/problem_step03.svg)
+	background-image: none
 }
 
 #id-index .p-problem__item li {
@@ -3925,7 +3925,7 @@ textarea {
 	display: block;
 	width: 20px;
 	height: 21px;
-	background: url(../img/common/icon/calendar-black.png) 0 0/cover;
+	background: none 0 0/cover;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -4220,7 +4220,7 @@ textarea {
 
 #id-index .p-flow {
 	margin-top: 40px;
-	background: url(../img/index/step_bg.png) center/cover no-repeat;
+	background: none center/cover no-repeat;
 	border-radius: 10px
 }
 
@@ -4254,7 +4254,7 @@ textarea {
 	position: absolute;
 	right: 0;
 	top: 0;
-	background: url(../img/index/step_arrow.png) right/cover no-repeat
+	background: none right/cover no-repeat
 }
 
 #id-index .p-flow__inner li:last-child,
@@ -4481,7 +4481,7 @@ textarea {
 
 #id-thanks .l-main {
 	margin-top: 0;
-	background: url(../img/index/mv_bg.png) bottom center/cover no-repeat
+	background: none bottom center/cover no-repeat
 }
 
 #id-thanks .p-thanks {
@@ -6947,7 +6947,7 @@ textarea {
 	}
 
 	.c-form__error:before {
-		background: url(../img/common/icon/alert01.png) no-repeat
+		background: none no-repeat
 	}
 
 	.c-form__radio {
@@ -7205,7 +7205,7 @@ textarea {
 	#id-index .p-flow {
 		margin-top: 20px;
 		border-radius: 8px;
-		background-image: url(../img/index/step_bg_sp.png)
+		background-image: none
 	}
 
 	#id-index .p-flow__inner li {
@@ -7223,7 +7223,7 @@ textarea {
 	#id-index .p-flow__inner li:after {
 		width: 100%;
 		height: 22px;
-		background-image: url(../img/index/step_arrow_sp.svg);
+		background-image: none;
 		background-size: 100% 100%;
 		top: auto;
 		bottom: 0
@@ -8875,7 +8875,7 @@ textarea {
 	font-weight: 700;
 	display: inline-block;
 	line-height: 1.2;
-	background: url(../img/common/icon/make-green.svg) right top 0px/62px no-repeat;
+	background: none right top 0px/62px no-repeat;
 	padding-right: 65px;
 	letter-spacing: 0;
 	margin: 0 -20px
@@ -9248,7 +9248,7 @@ background-color: #f28b45;
 	height: 18px;
 	display: inline-block;
     vertical-align: middle;
-	background: url(../img/download/download_green.svg) no-repeat center center;
+	background: none no-repeat center center;
 	background-size: 100% 100%;
 	transition: all ease 0.3s;
 }
@@ -9257,7 +9257,7 @@ background-color: #f28b45;
 	background: #245da4;
 }
 .p-download-list .link a:hover span::before {
-	background-image: url(../img/download/download_white.svg);
+	background-image: none;
 }
 @media (max-width:768px) {
 	.page-download-archive .l-main {
@@ -9319,7 +9319,7 @@ background-color: #f28b45;
    		background: #fff;
 	}
 	.p-download-list .link a:hover span::before {
-		background-image: url(../img/download/download_green.svg);
+		background-image: none;
 	}
 }
 /* パスワード保護フォームのスタイリング */

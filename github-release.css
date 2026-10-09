@@ -1240,3 +1240,100 @@
   .cp-consult-bridge small { font-size: 1rem; }
   #id-index .cp-mid-cta--imagegen .cp-mid-cta__note { margin-top: 20px; padding: 0 12px; font-size: 1.15rem; line-height: 1.7; }
 }
+
+/* Final desktop/tablet size for the approved raster CTA. */
+@media screen and (min-width: 769px) {
+  #id-index .cp-mid-cta.cp-mid-cta--image {
+    padding: 24px 0;
+    overflow: clip;
+  }
+
+  #id-index .cp-mid-cta.cp-mid-cta--image .cp-cta-image-wrap {
+    width: min(calc(100% - 48px),1120px);
+    max-width: 1120px;
+    border-radius: 28px;
+    box-shadow: 0 18px 46px rgba(22,63,117,.1);
+  }
+}
+
+/* Final emphasis and contrast pass. */
+@media screen and (min-width: 769px) {
+  #id-index .visual {
+    gap: 3%;
+    padding-right: 4.5%;
+    padding-left: 6.2%;
+  }
+
+  #id-index .visual .text-img {
+    width: 42%;
+    margin-right: 0;
+    margin-left: -2.2%;
+  }
+
+  #id-index .visual .slide.cp-universal-hero {
+    width: 52%;
+    margin-right: 0;
+  }
+
+  #id-index .cp-direct-choice--phone {
+    grid-template-columns: 112px minmax(0,1fr) !important;
+  }
+
+  #id-index .cp-direct-choice--phone .cp-direct-choice__art {
+    width: 104px;
+    height: 104px;
+  }
+
+  #id-index .cp-direct-choice--phone .cp-direct-choice__art img {
+    width: 66px !important;
+    height: 66px !important;
+  }
+
+  #id-index .cp-direct-choice > a strong { font-size: 2.2rem; }
+  #id-index .cp-direct-choice--phone > a em { font-size: 1.5rem; }
+}
+
+#id-index :is(.cp-outcomes__title,.cp-section-title,.cp-system .title,.headline01,.p-faq .c-ttl01) {
+  color: #123e76;
+  font-weight: 900;
+  text-wrap: balance;
+}
+
+#id-index :is(.cp-outcome-copy h3,.cp-reason-card h3,.cp-industry-scene h3,.cp-case-grid h3,.cp-price-hero strong) {
+  color: #123e76;
+  font-weight: 900;
+}
+
+#id-index :is(.cp-section-lead,.cp-outcome-copy p,.cp-reason-card p,.cp-industry-scene p,.cp-case-grid p,.cp-price-note,.c-faq__answer) {
+  color: #415f78;
+}
+
+/* Keep the approved CTA artwork while presenting the current phone number exactly. */
+.cp-cta-phone-number {
+  position: absolute;
+  z-index: 3;
+  top: 53.4%;
+  left: 59.8%;
+  display: grid;
+  width: 27.5%;
+  height: 12.5%;
+  place-items: center;
+  color: #0e3d78;
+  background: #fff;
+  font-size: clamp(2.2rem,2.4vw,4rem);
+  font-weight: 900;
+  letter-spacing: .02em;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 900px) {
+  .cp-cta-phone-number {
+    top: 72.2%;
+    left: 23.5%;
+    width: 57%;
+    height: 10.5%;
+    font-size: clamp(1.7rem,5.3vw,2.45rem);
+  }
+}
