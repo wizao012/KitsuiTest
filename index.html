@@ -20225,6 +20225,101 @@ body.preview-modal-open { overflow: hidden; }
 
 
 </style>
+  <style data-source="ivr-pricing.css">
+/* Two IVR plans; number and account charges remain secondary information. */
+#section-price.cp-ivr-pricing{--price-ink:#183f67;--price-green:#00834f;position:relative;isolation:isolate;overflow:hidden;background:#fbfefc;color:var(--price-ink);padding:88px 24px 72px;line-height:1.6}
+#section-price.cp-ivr-pricing::before,#section-price.cp-ivr-pricing::after{content:"";position:absolute;z-index:-1;pointer-events:none;border-radius:50%;background:#ecfaf4;width:520px;height:350px}
+#section-price.cp-ivr-pricing::before{left:-260px;top:-210px}
+#section-price.cp-ivr-pricing::after{right:-330px;top:150px;width:650px;height:650px;background:#f1fbf6}
+#section-price .cp-pricing-inner{max-width:1120px;margin:0 auto}
+#section-price .cp-pricing-heading{text-align:center;margin-bottom:40px}
+#section-price .cp-pricing-heading h2{color:var(--price-ink);font-size:42px;font-weight:900;line-height:1.45;letter-spacing:-.035em;margin:0}
+#section-price .cp-pricing-heading h2 span{display:inline-block;white-space:nowrap;position:relative}
+#section-price .cp-pricing-heading h2 span::after{content:"";position:absolute;z-index:-1;left:1%;right:1%;bottom:3px;height:9px;border-radius:20px;background:#ffe88a}
+#section-price .cp-pricing-heading p{font-size:19px;font-weight:600;margin:12px 0 0;color:var(--price-ink)}
+#section-price .cp-plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+#section-price .cp-plan-card{border:1px solid #cee5df;border-radius:22px;background:#fff;overflow:hidden;box-shadow:0 14px 32px #153e6721;display:flex;flex-direction:column;min-width:0}
+#section-price .cp-plan-top{background:#e4f8ef;padding:24px 20px 22px;text-align:center}
+#section-price .cp-plan-top p{font-size:17px;font-weight:700;line-height:1.6;margin:0 0 3px;color:var(--price-ink)}
+#section-price .cp-plan-top h3{font-size:31px;font-weight:900;line-height:1.5;color:var(--price-ink);margin:0;letter-spacing:-.025em}
+#section-price .cp-plan-business .cp-plan-top{background:var(--price-green)}
+#section-price .cp-plan-business .cp-plan-top h3,#section-price .cp-plan-business .cp-plan-top p{color:#fff}
+#section-price .cp-plan-body{padding:25px 28px 27px;display:flex;flex-direction:column;align-items:stretch;flex:1;text-align:center}
+#section-price .cp-plan-amount{display:flex;align-items:baseline;justify-content:center;gap:12px;line-height:1.1;white-space:nowrap;margin:7px 0 26px}
+#section-price .cp-plan-amount strong{font-size:86px;font-weight:900;letter-spacing:-.065em;font-variant-numeric:lining-nums tabular-nums;color:var(--price-ink)}
+#section-price .cp-plan-unit{font-size:22px;font-weight:800;letter-spacing:-.035em}
+#section-price .cp-plan-unit small{font-size:13px;font-weight:600;display:block;line-height:1.8;letter-spacing:0}
+#section-price .cp-plan-benefits{border-top:1px solid #d4e5e6;padding-top:19px;margin-bottom:24px}
+#section-price .cp-plan-benefits strong{display:block;font-size:26px;font-weight:900;line-height:1.5}
+#section-price .cp-plan-benefits p{font-size:17px;font-weight:700;line-height:1.65;margin:4px 0 0;text-wrap:balance}
+#section-price .cp-plan-consult{display:flex;align-items:center;justify-content:center;min-height:58px;padding:12px 16px;background:var(--price-ink);border-radius:40px;color:#fff;font-weight:800;font-size:19px;line-height:1.6;text-decoration:none;margin-top:auto;transition:opacity .2s,transform .2s}
+#section-price .cp-plan-business .cp-plan-consult{background:var(--price-green)}
+#section-price .cp-plan-consult::before,#section-price .cp-plan-consult::after{content:none}
+#section-price .cp-plan-consult:hover{opacity:.9;transform:translateY(-2px)}
+#section-price .cp-plan-consult:focus-visible{outline:3px solid #183f67;outline-offset:4px}
+#section-price .cp-extra-fees{margin-top:28px;padding:23px 26px;border-radius:18px;background:#edf5f4;display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:24px;align-items:center}
+#section-price .cp-extra-intro h3{font-size:20px;line-height:1.65;font-weight:800;color:var(--price-ink);margin:0 0 6px}
+#section-price .cp-extra-intro p{font-size:14px;line-height:1.8;margin:0;color:#405970}
+#section-price .cp-extra-column{padding-left:22px;border-left:1px solid #cbdeda;min-width:0}
+#section-price .cp-extra-column h4{font-size:15px;color:var(--price-ink);line-height:1.6;font-weight:800;margin:0 0 7px}
+#section-price .cp-extra-column h4 small{display:block;font-size:12px;font-weight:500;color:#4a6273}
+#section-price .cp-extra-column dl{margin:0;background:#ffffffcf;border-radius:7px;padding:0 10px}
+#section-price .cp-extra-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:5px 0;font-size:14px;line-height:1.65;color:var(--price-ink)}
+#section-price .cp-extra-row+.cp-extra-row{border-top:1px solid #e4eded}
+#section-price .cp-extra-row dt,#section-price .cp-extra-row dd{padding:0;margin:0;font-weight:500}
+#section-price .cp-extra-row dd{white-space:nowrap;font-variant-numeric:tabular-nums}
+#section-price .cp-pricing-notes{margin:17px 0 0;color:#465e6b;font-size:13px;line-height:1.8;text-align:center}
+@media(min-width:768px) and (max-width:1000px){
+  #section-price .cp-plan-body{padding:23px 20px}
+  #section-price .cp-plan-amount{gap:8px}
+  #section-price .cp-plan-amount strong{font-size:70px}
+  #section-price .cp-plan-unit{font-size:18px}
+  #section-price .cp-extra-fees{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 26px}
+  #section-price .cp-extra-intro{grid-column:1/-1;text-align:center}
+  #section-price .cp-extra-column{padding-left:0;border-left:0}
+}
+@media(max-width:767.99px){
+  #section-price.cp-ivr-pricing{padding:55px 18px 48px}
+  #section-price .cp-pricing-heading{margin-bottom:27px}
+  #section-price .cp-pricing-heading h2{font-size:29px;line-height:1.5;letter-spacing:-.04em}
+  #section-price .cp-pricing-heading h2 span{display:block;width:max-content;max-width:100%;margin:0 auto}
+  #section-price .cp-pricing-heading p{font-size:15px;line-height:1.8;margin-top:10px;text-wrap:balance}
+  #section-price .cp-plan-grid{grid-template-columns:minmax(0,1fr);gap:22px;max-width:460px;margin:auto}
+  #section-price .cp-plan-card{border-radius:19px;box-shadow:0 9px 24px #153e6712}
+  #section-price .cp-plan-top{padding:19px 14px 17px}
+  #section-price .cp-plan-top p{font-size:15px}
+  #section-price .cp-plan-top h3{font-size:27px;line-height:1.45}
+  #section-price .cp-plan-body{padding:20px 20px 22px}
+  #section-price .cp-plan-amount{gap:9px;margin:2px 0 20px}
+  #section-price .cp-plan-amount strong{font-size:74px;letter-spacing:-.065em}
+  #section-price .cp-plan-unit{font-size:19px}
+  #section-price .cp-plan-unit small{font-size:12px}
+  #section-price .cp-plan-benefits{padding-top:15px;margin-bottom:20px}
+  #section-price .cp-plan-benefits strong{font-size:23px}
+  #section-price .cp-plan-benefits p{font-size:15px;letter-spacing:-.03em}
+  #section-price .cp-plan-consult{min-height:53px;font-size:17px;padding:12px}
+  #section-price .cp-extra-fees{margin:25px auto 0;max-width:460px;padding:21px 18px;grid-template-columns:minmax(0,1fr);gap:18px;border-radius:15px}
+  #section-price .cp-extra-intro h3{font-size:19px;line-height:1.6;margin-bottom:5px}
+  #section-price .cp-extra-intro p{font-size:13px;line-height:1.8}
+  #section-price .cp-extra-column{padding:16px 0 0;border-left:0;border-top:1px solid #cbdeda}
+  #section-price .cp-extra-column h4{font-size:14px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  #section-price .cp-extra-column h4 small{font-size:11px}
+  #section-price .cp-extra-row{font-size:13px;padding:6px 0}
+  #section-price .cp-pricing-notes{font-size:12px;line-height:1.8;text-align:left;max-width:460px;margin:16px auto 0}
+}
+@media(max-width:359.99px){
+  #section-price.cp-ivr-pricing{padding-left:14px;padding-right:14px}
+  #section-price .cp-plan-body{padding-left:17px;padding-right:17px}
+  #section-price .cp-plan-amount strong{font-size:65px}
+  #section-price .cp-plan-amount{gap:7px}
+  #section-price .cp-plan-unit{font-size:17px}
+  #section-price .cp-plan-top h3{font-size:25px}
+  #section-price .cp-plan-top p{font-size:14px}
+  #section-price .cp-extra-intro h3{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){#section-price .cp-plan-consult{transition:none}}
+
+</style>
 </head>
 <body id="id-index" class="page-top_b">
 
@@ -20292,7 +20387,7 @@ body.preview-modal-open { overflow: hidden; }
 <ul class="cp-hero-facts">
 <li><p>無料トライアル</p><strong><b>30</b><span>日間</span></strong></li>
 <li><p>工事・機器</p><strong><b>0</b><span>円</span></strong></li>
-<li><p>IVR使い放題</p><strong class="cp-hero-money"><b>5,500</b><span>円/月</span></strong></li>
+<li><p>IVR使い放題</p><strong class="cp-hero-money"><b>1,650</b><span>円/月〜</span></strong></li>
 </ul>
 <p class="cp-hero-note">※税込。基本料金・通話料等は別途。<br>専用の主装置・設置工事が不要。トライアルの適用条件はお問い合わせください。</p>
 </div>
@@ -20387,7 +20482,7 @@ body.preview-modal-open { overflow: hidden; }
 <ul class="reason-list">
 <li class="reason-list__item"><div class="reason-list__badge cp-reason-number"><strong>17,000<small>件</small></strong><span>アカウント数突破！</span></div><p class="reason-list__point">POINT 01</p><h3 class="reason-list__ttl">会社番号で、<br>どこでも応対。</h3><p class="reason-list__text">企業・店舗・個人事業主まで。<br>スマホ・PC・電話機で会社番号を使い、場所を選ばず応対できます。</p></li>
 <li class="reason-list__item"><div class="reason-list__badge cp-reason-number"><strong>1<small>週間</small></strong><span>最短で利用開始</span></div><p class="reason-list__point">POINT 02</p><h3 class="reason-list__ttl">工事を待たず、<br>最短1週間で開始。</h3><p class="reason-list__text">主装置の設置や回線工事は不要。<br>東京03・大阪06など、全国の市外局番の番号発番にも対応します。</p></li>
-<li class="reason-list__item"><div class="reason-list__badge cp-reason-number"><strong>5,500<small>円/月</small></strong><span>IVR定額・使い放題</span></div><p class="reason-list__point">POINT 03</p><h3 class="reason-list__ttl">電話が増えても、<br>IVRは使い放題。</h3><p class="reason-list__text">自動音声応答は月額5,500円（税込）。<br>着信件数による従量課金を気にせず、電話受付を自動化できます。</p><p class="reason-list__note">※別途、基本料金・通話料等がかかります。利用開始日は申込状況等により異なります。</p></li>
+<li class="reason-list__item"><div class="reason-list__badge cp-reason-number"><strong>1,650<small>円/月〜</small></strong><span>IVR定額・使い放題</span></div><p class="reason-list__point">POINT 03</p><h3 class="reason-list__ttl">電話が増えても、<br>IVRは使い放題。</h3><p class="reason-list__text">IVRは月額1,650円（税込）から。<br>着信件数による従量課金を気にせず、電話受付を自動化できます。</p><p class="reason-list__note">※別途、基本料金・通話料等がかかります。利用開始日は申込状況等により異なります。</p></li>
 </ul></div></section>
 <section class="c-sec p-function cp-r-function" id="section-function">
 <div class="c-sec__inner">
@@ -20396,7 +20491,7 @@ body.preview-modal-open { overflow: hidden; }
 <p>電話の受付・振り分け・転送を、<br class="sp-only">まとめて効率化できます。</p>
 <div class="img cp-r-proof-grid">
 <div class="cp-r-proof"><span>電話受付を自動化</span><strong><b>24</b>時間</strong><small>不在時も音声でご案内</small></div>
-<div class="cp-r-proof"><span>IVRは定額で</span><strong>使い放題</strong><small>月額5,500円（税込）</small></div>
+<div class="cp-r-proof"><span>IVRは定額で</span><strong>使い放題</strong><small>月額1,650円〜（税込）</small></div>
 <div class="cp-r-proof"><span>会社番号を取得</span><strong>全国<span>市外局番</span></strong><small>東京03・大阪06など</small></div>
 <div class="cp-r-proof"><span>工事を待たずに</span><strong>最短<b>1</b>週間</strong><small>クラウドですぐに設定</small></div>
 </div>
@@ -20569,145 +20664,43 @@ body.preview-modal-open { overflow: hidden; }
 </ul>
 </div>
 </section>
-<section class="c-sec p-cost" id="section-price">
-<div class="c-sec__inner">
-<h2 class="headline01">料金</h2>
-<ul class="text-ul">
-<li><span class="color">IVR月額</span><strong class="cp-price-summary">5,500<small>円（税込）</small></strong></li>
-<li>使い放題</li>
-<li><span class="sml">着信件数による</span>従量課金なし</li>
-</ul>
-<div class="text-sub">
-<ul class="text-list">
-<li>
-<h3 class="ttl"><span>会社番号<span class="sml">市外局番</span></span></h3>
-<div class="white-bg">
-<p class="time"><span>990</span>円 / 月</p>
-<div class="title"><p>市外局番<br><span class="num">1</span>番号あたり<small>東京03・大阪06など</small></p></div>
-<div class="text"><p><span>\ こんな方におすすめ！ /</span>地域に合った固定番号を<br>取得したい方</p></div>
-<div class="link"><a href="#section-contact" class="is-download">WEBで相談する</a></div>
+<section class="c-sec cp-ivr-pricing" id="section-price" aria-labelledby="cp-pricing-title">
+<div class="cp-pricing-inner">
+<header class="cp-pricing-heading">
+<h2 id="cp-pricing-title">IVRは、<span>使い放題の2プラン</span></h2>
+<p>ビジネスの規模に合わせて選べます。</p>
+</header>
+<div class="cp-plan-grid">
+<article class="cp-plan-card cp-plan-lite" aria-labelledby="cp-lite-title">
+<div class="cp-plan-top"><p>小規模ビジネス向け</p><h3 id="cp-lite-title">ライトプラン</h3></div>
+<div class="cp-plan-body">
+<p class="cp-plan-amount"><strong>1,650</strong><span class="cp-plan-unit">円 / 月<small>（税込）</small></span></p>
+<div class="cp-plan-benefits"><strong>IVR使い放題</strong><p>着信件数による従量課金なし</p></div>
+<a class="cp-plan-consult" href="#section-contact">このプランを相談する</a>
 </div>
-</li>
-<li class="big">
-<h3 class="ttl"><span>自動音声応答<span class="sml">IVRオプション</span></span></h3>
-<div class="white-bg">
-<p class="time"><span>5,500</span>円 / 月</p>
-<div class="title"><p>着信件数にかかわらず<br><span class="num">使い放題</span><small>着信件数の従量課金なし</small></p></div>
-<div class="text"><p><span>\ こんな方におすすめ！ /</span>電話の受付・振り分けを<br>自動化したい方</p></div>
-<div class="link"><a href="#section-contact" class="is-download">WEBで相談する</a></div>
+</article>
+<article class="cp-plan-card cp-plan-business" aria-labelledby="cp-business-title">
+<div class="cp-plan-top"><p>中規模以上のビジネス向け</p><h3 id="cp-business-title">ビジネスプラン</h3></div>
+<div class="cp-plan-body">
+<p class="cp-plan-amount"><strong>5,500</strong><span class="cp-plan-unit">円 / 月<small>（税込）</small></span></p>
+<div class="cp-plan-benefits"><strong>IVR使い放題</strong><p>着信件数による従量課金なし</p></div>
+<a class="cp-plan-consult" href="#section-contact">このプランを相談する</a>
 </div>
-</li>
-<li>
-<h3 class="ttl"><span>スマホ利用<span class="sml">アカウント料金</span></span></h3>
-<div class="white-bg">
-<p class="time"><span>825</span>円 / 月</p>
-<div class="title"><p>スマホ<br><span class="num">1</span>端末あたり<small>会社番号をスマホで利用</small></p></div>
-<div class="text"><p><span>\ こんな方におすすめ！ /</span>外出先でも会社番号で<br>応対したい方</p></div>
-<div class="link"><a href="#section-contact" class="is-download">WEBで相談する</a></div>
+</article>
 </div>
-</li>
-<li>
-<h3 class="ttl"><span>構成に合わせて<span class="sml">お見積もり</span></span></h3>
-<div class="white-bg">
-<p class="time time01"><span>個別見積もり</span></p>
-<div class="title"><p>番号・端末・<br>オプションを組み合わせ</p></div>
-<div class="text"><p><span>\ こんな方におすすめ！ /</span>複数拠点や複数端末で利用したい方。ご利用に合う構成をご案内します。</p></div>
-<div class="link green"><a href="#section-contact">相談してみる</a></div>
-</div>
-</li>
-</ul>
-</div>
-<ul class="note-list">
-<li>※表示金額は税込です。各項目の料金であり、サービス全体の月額総額ではありません。</li>
-<li>※番号・アカウント・管理システム・オプションなど、ご利用構成に応じた費用が別途かかります。</li>
-<li>※番号発行や設定などの初期費用、通話料、SMS送信料などは別途かかります。</li>
-<li>※IVRの使い放題は着信件数によるIVR利用料が対象です。適用条件・お見積もりはお問い合わせください。</li>
-</ul>
-</div>
-</section>
-
-<section class="c-sec p-fee">
-<div class="c-sec__inner">
-<h2 class="headline02">料金に含まれるもの・<br class="sp-only">別途かかるもの</h2>
-<p>IVRは月額定額で使い放題。番号や端末、オプションなど、必要な構成に合わせてご利用いただけます。</p>
-<div class="table-box">
-<table>
-<thead>
-<tr>
-<th>料金項目</th>
-<td class="green"><span>料金の目安</span></td>
-<td class="gray"><span>内容</span></td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="big">IVR利用料</th>
-<td class="green big"><span class="star"><span class="num">月額5,500円</span>定額・使い放題</span></td>
-<td class="gray big">自動音声応答・用件振り分け</td>
-</tr>
-<tr>
-<th>着信件数による<br class="sp-only">IVR従量課金</th>
-<td class="green"><span class="num">なし</span>電話が増えてもIVR利用料は定額</td>
-<td class="gray">着信件数に応じた追加のIVR利用料なし</td>
-</tr>
-<tr>
-<th>会社番号<br class="sp-only">（市外局番）</th>
-<td class="green"><span class="num">月額990円</span>1番号あたり</td>
-<td class="gray">東京03・大阪06など<br>対応地域はお問い合わせください</td>
-</tr>
-<tr>
-<th>050番号</th>
-<td class="green"><span class="num">月額330円</span>1番号あたり</td>
-<td class="gray">IP電話用の050番号</td>
-</tr>
-<tr>
-<th>0120番号</th>
-<td class="green"><span class="num">月額3,300円</span>1番号あたり</td>
-<td class="gray">別途、市外局番などの構成が必要</td>
-</tr>
-<tr>
-<th>スマホアカウント</th>
-<td class="green"><span class="num">月額825円</span>スマホ1端末あたり</td>
-<td class="gray">会社番号で発信・着信</td>
-</tr>
-<tr>
-<th>PC・電話機<br class="sp-only">アカウント</th>
-<td class="green"><span class="num">月額550円</span>1端末あたり</td>
-<td class="gray">ソフトフォン・電話機で利用</td>
-</tr>
-<tr>
-<th>管理システム</th>
-<td class="green"><span class="num">月額7,150円</span>ご利用構成により必要</td>
-<td class="gray">専用管理画面で電話設定を管理</td>
-</tr>
-<tr>
-<th>SMSリザーブ</th>
-<td class="green"><span class="num">月額3,300円</span>別途、送信料が必要</td>
-<td class="gray">定型文や案内URLをSMSで送信</td>
-</tr>
-<tr>
-<th>サポート</th>
-<td class="green"><span class="num">月額1,100円〜</span>プランにより異なります</td>
-<td class="gray">アプリ設定・利用方法などをご案内</td>
-</tr>
-<tr>
-<th>通話料・外部番号への転送</th>
-<td class="green"><span class="num">別途</span>ご利用内容により異なります</td>
-<td class="gray">通話先や転送先に応じた費用</td>
-</tr>
-<tr>
-<th>番号発行・設定などの初期費用</th>
-<td class="green"><span class="num">別途</span>ご利用構成により異なります</td>
-<td class="gray">番号・端末・オプションに応じてお見積もり</td>
-</tr>
-</tbody>
-</table>
-<ul class="note">
-<li>※表示金額は税込です。各項目はサービス全体の総額ではありません。</li>
-<li>※ご利用サービスのバージョン・構成により、料金や適用条件は異なります。</li>
-<li>※IVR使い放題には通話料・SMS送信料・他のオプション料金は含まれません。</li>
-</ul>
-</div>
+<aside class="cp-extra-fees" aria-labelledby="cp-extra-title">
+<div class="cp-extra-intro"><h3 id="cp-extra-title">番号・アカウント料金について</h3><p>IVR料金に加え、<br>番号・端末の料金が別途かかります。</p></div>
+<div class="cp-extra-column"><h4>電話番号の料金<small>1番号あたり・月額</small></h4><dl>
+<div class="cp-extra-row"><dt>市外局番</dt><dd>990円</dd></div>
+<div class="cp-extra-row"><dt>050番号</dt><dd>330円</dd></div>
+<div class="cp-extra-row"><dt>0120・0800番号</dt><dd>3,300円</dd></div>
+</dl></div>
+<div class="cp-extra-column"><h4>アカウントの料金<small>1端末あたり・月額</small></h4><dl>
+<div class="cp-extra-row"><dt>PC・電話機</dt><dd>550円</dd></div>
+<div class="cp-extra-row"><dt>スマホ</dt><dd>825円</dd></div>
+</dl></div>
+</aside>
+<p class="cp-pricing-notes">※表示金額は税込です。1,650円・5,500円はIVRオプションの月額料金です。<br>番号・アカウント料金、通話料、初期費用などは別途かかります。詳しくはお問い合わせください。</p>
 </div>
 </section>
 
@@ -20717,7 +20710,7 @@ body.preview-modal-open { overflow: hidden; }
 <div class="c-faq">
 <dl class="c-faq__block is-open js-faq-accord">
 <dt class="c-faq__question"><span class="cp-q-unit">IVR（自動音声応答）</span><span class="cp-q-unit">はいくらで</span><span class="cp-q-unit">使えますか？</span></dt>
-<dd class="c-faq__answer">月額5,500円（税込）のオプションでご利用いただけます。着信件数によるIVR利用料の従量課金はなく、定額で使い放題です。<br>番号・端末などの利用料や通話料、初期費用は別途かかります。ご利用構成に合わせてお見積もりいたします。</dd>
+<dd class="c-faq__answer">小規模ビジネス向けのライトプランは月額1,650円、中規模以上のビジネス向けのビジネスプランは月額5,500円（税込）でご利用いただけます。どちらも着信件数による従量課金はなく、IVRが使い放題です。<br>番号・アカウント料金、通話料、初期費用などは別途かかります。ご利用構成に合わせてお見積もりいたします。</dd>
 </dl>
 <dl class="c-faq__block is-close js-faq-accord">
 <dt class="c-faq__question"><span class="cp-q-unit">外出先から</span><span class="cp-q-unit">会社番号で</span><span class="cp-q-unit">発信・折り返し</span><span class="cp-q-unit">できますか？</span></dt>
