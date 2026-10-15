@@ -20517,6 +20517,116 @@ body#id-index{color:var(--cp-body);line-break:strict}
 }
 
 </style>
+  <style data-source="cloud-phone-mobile.css">
+/* Mobile-only alignment. Desktop layouts and animation timing remain unchanged. */
+@media(max-width:767px){
+  body#id-index{--cp-mobile-gutter:clamp(20px,6.4vw,24px)}
+  #id-index .c-sec__inner{width:100%;max-width:520px;margin-inline:auto;padding-inline:var(--cp-mobile-gutter);box-sizing:border-box}
+  #id-index :is(.headline01,.headline02,.headline03,.c-ttl01,.p-reason-new .title){text-align:center}
+  #id-index :is(.com-btn,.p-function .link,.p-newCase .btn,.p-faq .btn){max-width:100%;margin-inline:auto}
+  #id-index .l-header{position:relative;min-height:54px;box-sizing:border-box}
+  #id-index .l-head{min-width:0;width:100%}
+  #id-index .l-header__logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0;width:120px}
+
+  /* Keep the hero and its controls on the same central axis. */
+  #id-index #cp-character-hero .visual-bg{padding:24px var(--cp-mobile-gutter) 28px}
+  #id-index #cp-character-hero .visual{max-width:472px;margin-inline:auto;gap:24px}
+  #id-index #cp-character-hero .visual .text-img.cp-hero-copy{width:100%;max-width:none;margin:0;padding:0}
+  #id-index #cp-character-hero .cp-hero-product{margin-left:0;text-align:center;font-size:clamp(12px,3.8cqw,16px);padding-bottom:8px}
+  #id-index #cp-character-hero .cp-hero-summary{margin-left:0;text-align:center}
+  #id-index #cp-character-hero .cp-hero-note{text-align:center;margin-inline:0;font-size:10px}
+  #id-index #cp-character-hero .paper-theatre{width:100%;max-width:none;margin-inline:auto}
+  #id-index #cp-character-hero .scene-heading{display:block;position:relative;text-align:center}
+  #id-index #cp-character-hero .scene-heading .scene-number{position:absolute;left:0;top:0}
+  #id-index #cp-character-hero .scene-heading h2{padding-inline:48px;line-height:44px;font-size:26px;text-align:center}
+  #id-index #cp-character-hero .scene-heading h2 span{margin:6px -48px 0;font-size:13px;line-height:1.7;text-align:center}
+  #id-index #cp-character-hero .playback{display:flex;flex-direction:column;align-items:center;gap:10px;padding-inline:0}
+  #id-index #cp-character-hero .step-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;flex:none;width:100%}
+  #id-index #cp-character-hero .step-tabs button{justify-content:center;gap:5px;padding:10px 4px;font-size:13px}
+  #id-index #cp-character-hero .motion-controls{justify-content:center;width:100%;gap:24px}
+
+  /* Icons stay inside the CTA rather than hanging outside its left edge. */
+  #id-index .l-mv__bg{padding:24px var(--cp-mobile-gutter);margin-top:0}
+  #id-index .l-mv__linkList{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;width:100%;max-width:420px;margin:0 auto;padding:0}
+  #id-index .l-mv__linkList .fuwafuwa{animation:none;transform:none}
+  #id-index .l-mv__linkList li{position:relative;width:100%;margin:0;padding:0}
+  #id-index .l-mv__linkList li>a{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;min-height:86px;margin:0;padding:13px 10px 13px 76px;box-sizing:border-box;font-size:clamp(16px,4.5vw,18px);line-height:1.5;text-align:center}
+  #id-index .l-mv__linkList li>a .sml{font-size:10px;line-height:1.6;margin-bottom:3px}
+  #id-index .l-mv__linkList li>img{position:absolute;left:8px;top:50%;bottom:auto;transform:translateY(-50%);width:68px;max-width:68px;height:auto;z-index:11}
+  #id-index .l-mv__linkList .cp-phone-art{position:absolute;left:14px;top:50%;bottom:auto;transform:translateY(-50%);width:50px;height:50px;min-height:50px;max-width:50px;padding:0;border:0;box-shadow:none;justify-content:center}
+  #id-index .l-mv__linkList .cp-phone-art__icon{width:44px;height:44px;flex:0 0 44px}
+  #id-index .l-mv__linkList .cp-phone-art__icon img{width:30px!important;height:30px}
+
+  /* Main ideas are centered; long explanatory copy keeps a readable left edge. */
+  #id-index .p-reason-new .reason-list__item{grid-template-columns:minmax(0,1fr);column-gap:0;row-gap:0}
+  #id-index .p-reason-new .reason-list__badge{grid-column:1;margin-bottom:18px}
+  #id-index .p-reason-new .reason-list__point{grid-column:1;justify-self:center;margin:0 auto 12px}
+  #id-index .p-reason-new .reason-list__ttl{grid-column:1;text-align:center;font-size:22px;margin:0 auto}
+  #id-index .p-reason-new .reason-list__text,#id-index .p-reason-new .reason-list__note{grid-column:1;padding-inline:4px;text-align:left;line-height:1.85}
+  #id-index .p-function .headline01{padding-left:0;text-align:center;font-size:clamp(24px,6.4vw,28px);line-height:1.55}
+  #id-index .p-function .headline01>img{position:static;display:block;transform:none;width:48px;height:48px;margin:0 auto 14px}
+  #id-index .cp-mobile-heading-unit{display:inline-block;white-space:nowrap;max-width:100%}
+  #id-index .p-function .info .btn{text-align:center;width:100%;margin:18px auto 0}
+  #id-index .p-function .img_list>li{padding:22px 16px}
+  #id-index .p-function .img_list>li>h3{padding-left:0;text-align:center;font-size:14px;line-height:1.75}
+  #id-index .p-function .img_list>li>h3 .num{position:static;display:block;transform:none;width:52px;margin:0 auto 12px;text-align:center;font-size:10px;line-height:1.2}
+  #id-index .p-function .img_list>li>h3 .num>span{display:block;font-size:36px;line-height:1.1}
+  #id-index .p-function .img_list>li>h3 .big{display:block;font-size:20px;line-height:1.5;margin-bottom:8px}
+  #id-index .cp-r-proof small .cp-keep{white-space:normal}
+  #id-index .cp-r-transfer .cp-r-center{flex:0 0 52px}
+  #id-index .cp-r-transfer .cp-r-center strong{white-space:nowrap}
+  #id-index .p-function .text_list{margin-inline:auto}
+  #id-index .p-point .imgBox{padding:24px 16px}
+  #id-index .p-point .num{margin-inline:auto}
+  #id-index .p-point .headline03{text-align:center;line-height:1.6}
+  #id-index .p-point .text{padding-inline:2px;text-align:left;line-height:1.9}
+  #id-index .p-point .tel{width:min(100%,280px);margin:20px auto 0}
+  #id-index .p-point .tel a{padding:12px 8px;box-sizing:border-box;font-size:13px;line-height:1.7}
+  #id-index .p-point .tel a span{margin-top:4px;font-size:clamp(22px,6.4vw,28px);line-height:1.3}
+  #id-index .p-point :is(.img,.rBox){max-width:100%;margin-inline:auto}
+  #id-index .p-system .white-box{padding:10px 12px 20px}
+  #id-index .p-system li{padding:24px 4px}
+  #id-index .p-system .ttl{text-align:center;font-size:20px;line-height:1.6;letter-spacing:0;text-wrap:balance}
+  #id-index .p-system .ttl .en{position:static;display:block;transform:none;width:max-content;margin:0 auto 12px}
+  #id-index .p-system li p{text-align:left;line-height:1.9;letter-spacing:0}
+  #id-index .c-contact li .cp-phone-art{max-width:100%}
+  #id-index .c-contact .headline01{font-size:24px;line-height:1.6}
+  #id-index .p-newCase .case-list .box{padding:20px 18px}
+  #id-index .p-newCase .case-list .ttl{text-align:center;line-height:1.65}
+  #id-index .p-newFlow li{padding-inline:20px;max-width:100%;box-sizing:border-box}
+  #id-index .p-newFlow :is(.num,.ico,.ttl){text-align:center;margin-inline:auto}
+  #id-index #section-price.cp-ivr-pricing{padding-inline:var(--cp-mobile-gutter)}
+  #id-index #section-price .cp-extra-intro{text-align:center}
+  #id-index .c-faq__block{padding-inline:16px;box-sizing:border-box}
+
+  /* Equal-sized name fields, comfortable touch text and centered footer. */
+  #id-index .c-form__inner{padding:24px 16px}
+  #id-index .c-form__detailColumn{display:grid;grid-template-columns:auto minmax(0,1fr) auto minmax(0,1fr);gap:8px}
+  #id-index .c-form__detailColumn .is-name{margin:0}
+  #id-index .c-form__inner :is(input[type=text],input[type=email],input[type=tel],textarea){min-width:0;width:100%;box-sizing:border-box;font-size:16px}
+  #id-index .c-form__submit{max-width:100%;margin-inline:auto}
+  #id-index .c-form__caution.is-small{font-size:12px;line-height:1.7}
+  #id-index .l-footer__inner{display:flex;flex-direction:column;align-items:center;gap:18px;max-width:520px;margin-inline:auto;padding:30px var(--cp-mobile-gutter) calc(30px + env(safe-area-inset-bottom));box-sizing:border-box}
+  #id-index .l-footer__inner>a{display:block;width:160px;margin-inline:auto}
+  #id-index .f_navi{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;max-width:350px;margin:0;text-align:center;font-size:12px}
+  #id-index .f_navi li{border:0;padding:0}
+  #id-index .f_navi a{text-align:center;padding:4px 0;line-height:1.6}
+  #id-index .l-footer__cp{margin:0;text-align:center;font-size:12px}
+}
+@media(max-width:359px){
+  #id-index #cp-character-hero .scene-heading h2{font-size:24px;line-height:40px;padding-inline:44px}
+  #id-index #cp-character-hero .scene-heading h2 span{margin-inline:-44px;font-size:12px}
+  #id-index .p-reason-new .reason-list__ttl{font-size:21px}
+  #id-index .c-contact .cp-phone-art{gap:8px;padding:16px 12px}
+  #id-index .c-contact .cp-phone-art__icon{width:42px;height:42px;flex-basis:42px}
+  #id-index .c-contact .cp-phone-art strong{font-size:18px}
+  #id-index .c-contact .cp-phone-art b{font-size:17px}
+  #id-index .c-contact .pink a{font-size:19px}
+  #id-index .c-form__inner{padding-inline:12px}
+  #id-index .c-form__caution.is-small{font-size:11px}
+}
+
+</style>
 </head>
 <body id="id-index" class="page-top_b">
 
@@ -20683,7 +20793,7 @@ body#id-index{color:var(--cp-body);line-break:strict}
 </ul></div></section>
 <section class="c-sec p-function cp-r-function" id="section-function">
 <div class="c-sec__inner">
-<h2 class="headline01"><img width="86" height="86" data-inline-copy="cp-asset-9" alt="">クラウドフォンの<span class="green">IVR</span>は<span class="line">ここがすごい</span>！</h2>
+<h2 class="headline01"><img width="86" height="86" data-inline-copy="cp-asset-9" alt=""><span class="cp-mobile-heading-unit">クラウドフォンの<span class="green">IVR</span>は</span><span class="cp-mobile-heading-unit"><span class="line">ここがすごい</span>！</span></h2>
 <div class="info">
 <p>電話の受付・振り分け・転送を、<br class="sp-only">まとめて効率化できます。</p>
 <div class="img cp-r-proof-grid">
@@ -20807,7 +20917,7 @@ body#id-index{color:var(--cp-body);line-break:strict}
 <div class="white-box">
 <ul>
 <li>
-<h3 class="ttl"><span class="en">SUPPORT<span class="num">01</span></span>はじめてでも迷わない！ 導入前のご相談</h3>
+<h3 class="ttl"><span class="en">SUPPORT<span class="num">01</span></span><span class="cp-mobile-heading-unit">はじめてでも迷わない！</span> <br class="sp-only">導入前のご相談</h3>
 <p>必要な電話番号や端末、オプションを確認し、使い方に合った構成をご案内。<br>はじめてのクラウド電話も、お気軽にご相談ください。</p>
 </li>
 <li>
